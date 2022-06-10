@@ -37,8 +37,7 @@ const Game = () => {
 	}, []);
 
 	useEffect(() => {
-		if (JSON.stringify(winOrder[0]) === JSON.stringify(randomSquares[0])) {
-			console.log('WINNER WINNER CHICKEN DINNER');
+		if (JSON.stringify(winOrder) === JSON.stringify(randomSquares)) {
 			dispatch(timerActions.stop());
 			setWinCondition(true);
 		}

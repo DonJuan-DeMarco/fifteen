@@ -31,11 +31,8 @@ const Timer = () => {
 		if (isActive) {
 			interval = setInterval(() => {
 				setSeconds((seconds) => ++seconds);
-			}, 100);
+			}, 1000);
 		} else if (isReset) {
-			console.log('====================================');
-			console.log('RESET');
-			console.log('====================================');
 			reset();
 			clearInterval(interval);
 		} else if (!isActive && seconds !== 0) {
